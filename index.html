@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Game Life</title>
+</head>
+<body>
+    <div class="settings">
+        <div class="setting">
+            <p class="text">Размер поля (10-1000):</p>
+            <div>
+                <input type="number" id="lifeCount" name="lifeCount" min="10" max="1000" value="10" />
+                <button class="lifeCountBtn">Принять</button>
+            </div>
+        </div>
+        <div class="setting">
+            <p class="text">Создать поколение</p>
+            <div>
+                <button class="generatorRandomBtn">Сгенерировать</button>
+                <button class="сlearBtn">Убить всех</button>
+            </div>
+        </div>
+        <div class="setting">
+            <button class="playBtn">Запустить</button>
+            <button class="stopBtn">Остановить</button>
+        </div>
+        <div class="setting">
+            <p class="text">Время</p>
+            <input id = "rangeTime" type="range" min="10" max="2000" step="10" value="50" onchange="document.getElementById('rangeValue').innerHTML = `${this.value} ms`;"><br>
+            <span id="rangeValue">50 ms</span>
+        </div>
+        <div class="setting">
+            <p class="text">Время создания одного поколения</p>
+            <p class="timeOneGeneration">0 ms</p>
+        </div>
+    </div>
+
+    <div class="game"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
