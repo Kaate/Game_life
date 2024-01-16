@@ -1,4 +1,8 @@
 
+html {
+    --game-size: 900;
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -73,11 +77,8 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     flex-flow: row wrap;
 
-    width: 900px;
-    height: 900px;
-
-    /* width: calc(25vmin - 5px);
-    height: calc(25vmin - 5px); */
+    width: calc(var(--game-size) * 1px);
+    height: calc(var(--game-size) * 1px);
 
     border: 1px solid #683250;
 }
@@ -88,9 +89,6 @@ input[type="range"]::-webkit-slider-thumb {
 
     width: 90px;
     height: 90px;
-
-    /* width: calc(5vmin - 1px);
-    height: calc(5vmin - 1px); */
 
     background-color: #f0d1e1;
     border: 1px solid #ffebf583;
